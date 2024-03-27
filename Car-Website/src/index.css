@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  color: #fff;
+  background-color: #1b1b1b;
+}
+
+.btn {
+  color: yellow;
+  border: 1px solid yellow;
+  padding: 10px;
+}
+
+.btn2 {
+  background-color: yellow;
+  border-radius: 10px;
+  color: black;
+  padding: 10px 20px;
+  font-weight: 800;
+  width: fit-content;
+}
+
+.home {
+  gap: 200px;
+}
+
+.right {
+  border-radius: 50%;
+  padding: 50px 1px;
+
+}
+
+.button-effect {
+  padding: 30px 0px;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  a {
+    margin-right: 17px;
+
+    &:nth-child(2) {
+      background-color: yellow;
+    }
+  }
+}
+
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: capitalize;
+
+  padding: 20px 0px;
+  width: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* effect-1 styles */
+
+.effect.effect-1 {
+  transition: all 0.2s linear 0s;
+
+  &:before {
+    content: "➡️";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+  }
+
+  &:hover {
+    text-indent: -20px;
+
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
+
+
+
+
+
+.why .box {
+  transition: .5s ease;
+}
+
+.why .box:hover {
+  background-color: yellow;
+  color: black;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .home .left {
+    text-align: center;
+  }
+
+
+  .about {
+    display: grid;
+  }
+
+  .about .content {
+    margin-top: -200px;
+  }
+
+  .about .right {
+    text-align: center;
+    margin: auto;
+  }
+
+  .about .btn {
+    margin: auto;
+  }
+}
